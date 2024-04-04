@@ -7,6 +7,9 @@ def generate_password(length):
     generate random password
     
     """
+    characters = string.ascii_letters + string.digits + "!@#$%^&*()_+=-[]{}|;:,.<>?~"
+    password = ''.join(random.choice(characters) for _ in range(length))
+    return password
     
 def get_password_length():
     """
