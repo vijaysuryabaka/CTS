@@ -16,6 +16,15 @@ def get_password_length():
     get password length from the user
     
     """
+    while True:
+        try:
+            length = int(input("Enter the length of the password: "))
+            if length <= 0:
+                print("Please enter a positive integer.")
+            else:
+                return length
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
     
 
 def generate_password_with_options(length, include_symbols=False, include_numbers=False, include_uppercase=False, include_lowercase=False):
